@@ -4,6 +4,8 @@ const Engine = Matter.Engine;
 const World = Matter.World;
 const Bodies = Matter.Bodies;
 const Body = Matter.Body;
+var w1,w2,w3;
+
 
 function preload()
 {
@@ -23,6 +25,16 @@ function setup() {
 	helicopterSprite=createSprite(width/2, 200, 10,10);
 	helicopterSprite.addImage(helicopterIMG)
 	helicopterSprite.scale=0.6
+	
+	w2=createSprite(width/2-100,630,20,100);
+	w2.shapeColor="red";
+	
+	w3=createSprite(width/2+100,630,20,100);
+	w3.shapeColor="red";
+	
+	w1=createSprite(width/2,630,200,20);
+	w1.shapeColor="red";
+	
 
 	groundSprite=createSprite(width/2, height-35, width,10,);
 	groundSprite.shapeColor=color(255)
