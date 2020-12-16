@@ -5,8 +5,6 @@ const World = Matter.World;
 const Bodies = Matter.Bodies;
 const Body = Matter.Body;
 var w1,w2,w3;
-
-
 function preload()
 {
 	helicopterIMG=loadImage("helicopter.png")
@@ -25,16 +23,16 @@ function setup() {
 	helicopterSprite=createSprite(width/2, 200, 10,10);
 	helicopterSprite.addImage(helicopterIMG)
 	helicopterSprite.scale=0.6
-	
-	w2=createSprite(width/2-100,630,20,100);
+
+	w2=createSprite(width/2-100,610,20,100);
 	w2.shapeColor="red";
 	
-	w3=createSprite(width/2+100,630,20,100);
+	w3=createSprite(width/2+100,610,20,100);
 	w3.shapeColor="red";
 	
-	w1=createSprite(width/2,700,200,20);
+	w1=createSprite(width/2,650,200,20);
 	w1.shapeColor="red";
-	
+
 
 	groundSprite=createSprite(width/2, height-35, width,10,);
 	groundSprite.shapeColor=color(255)
@@ -43,7 +41,7 @@ function setup() {
 	engine = Engine.create();
 	world = engine.world;
 
-	packageBody = Bodies.circle(width/2 , 200 , 5 , {restitution:1, isStatic:true});
+	packageBody = Bodies.circle(width/2 , 200 , 5 , {restitution:0.8, isStatic:true});
 	World.add(world, packageBody);
 	
 
@@ -51,9 +49,10 @@ function setup() {
 	ground = Bodies.rectangle(width/2, 650, width, 10 , {isStatic:true} );
  	World.add(world, ground);
 
+	w1=Bodies.rectangle(width/2,638,200,20, {isStatic:true} );
+	World.add(world, w1);
 
 	
-
 	Engine.run(engine);
   
 }
