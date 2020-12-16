@@ -32,7 +32,7 @@ function setup() {
 	w3=createSprite(width/2+100,630,20,100);
 	w3.shapeColor="red";
 	
-	w1=createSprite(width/2,630,200,20);
+	w1=createSprite(width/2,670,200,20);
 	w1.shapeColor="red";
 	
 
